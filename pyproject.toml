@@ -1,0 +1,11 @@
+[project]
+name = "ms-point-farmer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cdp-patches>=1.0.1",
+    "patchright>=1.52.5",
+    "pywin32>=310",
+]
