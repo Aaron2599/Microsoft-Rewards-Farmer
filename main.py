@@ -209,7 +209,7 @@ def main():
 
                 if start_points != end_points:
                     log_to_file(f"points: {end_points}")
-                    log_to_file(f"collected:{end_points - start_points}")
+                    log_to_file(f"collected:{int(end_points.replace(",", "")) - int(start_points.replace(",", ""))}")
                     last_run = datetime.now().day
                 else:
                     log_to_file(f"No change in points trying again soon")
