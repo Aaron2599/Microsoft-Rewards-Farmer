@@ -205,15 +205,15 @@ def main():
 
                     end_points = get_points(browser)
 
-                    if start_points != end_points:
-                        log_to_file(f"points: {end_points}")
-                        log_to_file(f"collected:{end_points - start_points}")
-                        last_run = datetime.now().day
-                    else:
-                        log_to_file(f"No change in points trying again soon")
-                        time.sleep(2 * 60 * 60)
-
                     browser.close()
+
+                if start_points != end_points:
+                    log_to_file(f"points: {end_points}")
+                    log_to_file(f"collected:{end_points - start_points}")
+                    last_run = datetime.now().day
+                else:
+                    log_to_file(f"No change in points trying again soon")
+                    time.sleep(2 * 60 * 60)
 
             except Exception as e:
                 t = traceback.format_exc()
